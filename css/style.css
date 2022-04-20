@@ -71,12 +71,16 @@ footer a:visited{
 }
 /*****  End Starter Code ****/
 
+nav li a{
+  text-decoration-line:none;}
+
 nav a:hover{
   text-decoration: underline wavy;
 }
 
 nav a:focus{
   border-top: 2px solid yellow;
+
 }
 
 a.skip{
@@ -100,12 +104,12 @@ a.skip:focus{
   min-height: 400px;
   background-attachment: fixed;
   background-position: center;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   background-size: cover;
   font-size: 50px;
   line-height: 1;
   padding: 50px 0;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .container{
@@ -121,7 +125,7 @@ img{
  }
  
  .about, .clients, .method, .contact{
-  grid-column: 2;
+  grid-column: 2/span 1;
   /* z-index: 1;  */
   /* align-content: space-between;
   position: relative;  */
@@ -153,7 +157,7 @@ img{
 
 .text{
   align-self: center;
-  max-height: 25%;
+  max-height: 25vh;
   overflow: scroll;
 }
 
@@ -175,6 +179,7 @@ img{
   }
 
   .container{
+    display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
     grid-row: 300px 300px 300px 300px;
   }
@@ -185,6 +190,12 @@ img{
 
   .method, .contact, .about-image, .clients-image {
     grid-column: 2 / span 2;
+  }
+  
+  .text{
+    align-self: center;
+    max-height: 25vh;
+    overflow:scroll;
   }
 
 }
